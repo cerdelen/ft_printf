@@ -6,23 +6,8 @@ AR = ar rcs
 
 NAME = libftprintf.a
 
-SRCS = 	ft_itoa.c\
-		ft_printf.c\
-		ft_createaddrstr.c\
-		ft_putchar_fd.c\
-		ft_putstr_fd.c\
-		ft_toupper.c\
-		ft_unsigneditoa.c\
-		ft_createhex.c\
-		case_iord.c\
-		case_pro.c\
-		case_u.c\
-		case_xup.c\
-		case_c.c\
-		case_p.c\
-		case_s.c\
-		case_x.c\
-		ft_strlen.c
+SRCS = 	case_c.c case_pro.c case_x.c ft_createhex.c ft_printf.c ft_strlen.c case_iord.c case_s.c case_xup.c ft_itoa.c ft_printstr_fd.c ft_unsigneditoa.c\
+		case_p.c case_u.c ft_createaddrstr.c ft_printchar_fd.c  ft_stringtoupper.c
 
 OBJS = $(SRCS:.c=.o)
 
@@ -34,11 +19,11 @@ $(OBJS):
 
 all: $(NAME) 
 
-bonus: fclean $(OBJS)
-	$(AR) $(NAME) $(OBJS)
+bonus: fclean $(OBJS_B) $(OBJS)
+	$(AR) $(NAME) $(OBJS_B) $(OBJS)
 
 clean:
-	$(RM) $(OBJS)
+	$(RM) $(OBJS) $(OBJS_B) test
 
 fclean: clean
 	$(RM) $(NAME)

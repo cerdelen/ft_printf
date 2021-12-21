@@ -14,6 +14,6 @@
 
 int	case_c(va_list *args)
 {
-	ft_putchar_fd(va_arg(*args, int), 1);
+	ft_printchar_fd(va_arg(*args, int), 1);
 	return (1);
 }

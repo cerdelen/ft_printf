@@ -19,6 +19,6 @@ int	case_s(va_list *args)
 	str = va_arg(*args, char *);
 	if (!str)
 		str = "(null)";
-	ft_putstr_fd(str, 1);
+	ft_printstr_fd(str, 1);
 	return (ft_strlen(str));
 }

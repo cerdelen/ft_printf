@@ -18,7 +18,7 @@ int	case_u(va_list *args)
 	int		count;
 
 	str = ft_unsigneditoa(va_arg(*args, unsigned int));
-	ft_putstr_fd(str, 1);
+	ft_printstr_fd(str, 1);
 	count = ft_strlen(str);
 	free(str);
 	return (count);

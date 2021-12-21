@@ -18,7 +18,7 @@ int	case_iord(va_list *args)
 	int		count;
 
 	str = ft_itoa(va_arg(*args, int));
-	ft_putstr_fd(str, 1);
+	ft_printstr_fd(str, 1);
 	count = ft_strlen(str);
 	free(str);
 	return (count);

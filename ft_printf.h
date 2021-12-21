@@ -18,18 +18,14 @@
 
 # include <unistd.h>
 
-# include <stddef.h>
-
 # include <stdarg.h>
 
-# include <stdlib.h>
-
 char	*ft_itoa(int n);
-int		ft_putchar_fd(int c, int fd);
-int		ft_putstr_fd(char *s, int fd);
+void	ft_printchar_fd(int c, int fd);
+int		ft_printstr_fd(char *s, int fd);
 char	*ft_unsigneditoa(unsigned int n);
 char	*ft_createhex(int x);
-char	*ft_toupper(char *str);
+char	*ft_stringtoupper(char *str);
 int		ft_printf(const char *format, ...);
 char	*createaddrstr(void *ptr);
 int		ft_strlen(const char *s);

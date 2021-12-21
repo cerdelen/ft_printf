@@ -24,7 +24,7 @@ int	case_p(va_list *args)
 		str = createaddrstr(ptr);
 	else
 		str = "0";
-	ft_putstr_fd(str, 1);
+	ft_printstr_fd(str, 1);
 	count = 2 + ft_strlen(str);
 	if (ptr)
 		free(str);

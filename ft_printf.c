@@ -16,6 +16,7 @@ static int	distributor(char c, va_list *args)
 {
 	int			count;
 
+	count = 0;
 	if (c == 'c')
 		count = case_c(args);
 	else if (c == 's')
@@ -52,7 +53,7 @@ int	ft_printf(const char *format, ...)
 			ind += 2;
 		else
 		{
-			ft_putchar_fd(format[ind], 1);
+			ft_printchar_fd(format[ind], 1);
 			count++;
 			ind++;
 		}

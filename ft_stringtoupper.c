@@ -1,25 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   case_x.c                                           :+:      :+:    :+:   */
+/*   ft_toupper.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: Cerdelen < cerdelen@student.42wolfsburg.de +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/12/04 20:11:46 by Cerdelen          #+#    #+#             */
-/*   Updated: 2021/12/04 20:11:46 by Cerdelen         ###   ########.fr       */
+/*   Created: 2021/12/04 20:20:30 by Cerdelen          #+#    #+#             */
+/*   Updated: 2021/12/04 20:20:30 by Cerdelen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	case_x(va_list *args)
+char	*ft_stringtoupper(char *str)
 {
-	char	*str;
-	int		count;
+	int	i;
 
-	str = ft_createhex(va_arg(*args, int));
-	ft_printstr_fd(str, 1);
-	count = ft_strlen(str);
-	free(str);
-	return (count);
+	i = 0;
+	while (str[i])
+	{
+		if (str[i] > 96 && str[i] < 123)
+			str[i] -= 32;
+		i++;
+	}
+	return (str);
 }

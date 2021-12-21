@@ -1,25 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   case_x.c                                           :+:      :+:    :+:   */
+/*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: Cerdelen < cerdelen@student.42wolfsburg.de +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/12/04 20:11:46 by Cerdelen          #+#    #+#             */
-/*   Updated: 2021/12/04 20:11:46 by Cerdelen         ###   ########.fr       */
+/*   Created: 2021/12/04 20:21:48 by Cerdelen          #+#    #+#             */
+/*   Updated: 2021/12/04 20:21:48 by Cerdelen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	case_x(va_list *args)
+void	ft_printchar_fd(int c, int fd)
 {
-	char	*str;
-	int		count;
-
-	str = ft_createhex(va_arg(*args, int));
-	ft_printstr_fd(str, 1);
-	count = ft_strlen(str);
-	free(str);
-	return (count);
+	write(fd, &c, 1);
 }

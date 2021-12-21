@@ -18,8 +18,8 @@ int	case_xup(va_list *args)
 	int		count;
 
 	str = ft_createhex(va_arg(*args, int));
-	str = ft_toupper(str);
-	ft_putstr_fd(str, 1);
+	str = ft_stringtoupper(str);
+	ft_printstr_fd(str, 1);
 	count = ft_strlen(str);
 	free(str);
 	return (count);

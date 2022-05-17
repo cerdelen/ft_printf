@@ -19,7 +19,7 @@ int	print_hex(int i)
 	counter = 0;	
 	if (i >= 16)
 		counter = print_hex(i / 16);
-	return (counter + write(1, &"0123456789abcdef"[i % 16], 1));
+	return (counter + write(1, &"0123456789ABCDEF"[i % 16], 1));
 }
 
 int	case_xup(va_list *args)

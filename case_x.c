@@ -16,6 +16,8 @@ int	print_hex(int i)
 {
 	int		counter;
 
+	if (i < 0)
+		i += 4294967296;
 	counter = 0;	
 	if (i >= 16)
 		counter = print_hex(i / 16);
